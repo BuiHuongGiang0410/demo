@@ -98,3 +98,11 @@ Route::get('getEating/id/image/{id}',function($id){
     return Response::json($data);
     
 });
+
+Route::get('getType/count',function(){
+    $data = DB::table('type')->select("idType","count")->get();
+    return Response::json($data);
+    
+});
+
+
